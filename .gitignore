@@ -1,0 +1,22 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Archive files (user-generated content)
+archive/*.json
+archive/*.html
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp

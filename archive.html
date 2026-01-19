@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Park Lane Title - Weekly Updates Archive</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .archive-header {
+            margin-bottom: var(--space-10);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: var(--space-6);
+            color: var(--color-text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid var(--color-text-primary);
+            transition: opacity var(--duration-base) var(--easing);
+        }
+
+        .back-link:hover {
+            opacity: 0.7;
+        }
+
+        .year-section {
+            margin-bottom: var(--space-12);
+        }
+
+        .year-header {
+            font-size: 32px;
+            font-weight: 600;
+            color: var(--color-text-primary);
+            margin-bottom: var(--space-8);
+            letter-spacing: -0.01em;
+        }
+
+        .month-section {
+            margin-bottom: var(--space-10);
+            margin-left: var(--space-6);
+        }
+
+        .month-header {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--color-text-primary);
+            margin-bottom: var(--space-6);
+            text-transform: capitalize;
+        }
+
+        .updates-list {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-4);
+            margin-left: var(--space-8);
+        }
+
+        .update-link {
+            display: block;
+            padding: var(--space-4) var(--space-6);
+            border: 1px solid var(--color-divider);
+            background: var(--color-background);
+            color: var(--color-text-primary);
+            text-decoration: none;
+            transition: border-color var(--duration-base) var(--easing);
+        }
+
+        .update-link:hover {
+            border-color: var(--color-text-primary);
+        }
+
+        .update-title {
+            font-weight: 500;
+            margin-bottom: var(--space-1);
+        }
+
+        .update-meta {
+            font-size: 14px;
+            color: var(--color-text-secondary);
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: var(--space-20) var(--space-6);
+            color: var(--color-text-secondary);
+        }
+
+        .loading {
+            text-align: center;
+            padding: var(--space-10);
+            color: var(--color-text-secondary);
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <a href="index.html" class="back-link">← Back to Weekly Update</a>
+        
+        <div class="archive-header">
+            <h1>Previous Updates Archive</h1>
+            <p style="color: var(--color-text-secondary); margin-top: var(--space-2);">Organized by year and month</p>
+        </div>
+        
+        <div id="archiveContent">
+            <div class="loading">Loading archive...</div>
+        </div>
+    </div>
+    
+    <script src="archive.js"></script>
+</body>
+</html>

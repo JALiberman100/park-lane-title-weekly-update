@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Park Lane Title - Weekly Update</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Sidebar -->
+    <nav class="sidebar" id="sidebar">
+        <button class="sidebar-toggle" id="sidebarToggle">☰</button>
+        <div class="sidebar-content">
+            <h3>Quick Links</h3>
+            <div class="link-section">
+                <h4>Product/Engineering</h4>
+                <a href="https://www.figma.com/board/s5yoEnP9yozljqLqe4wpv2/Title-Agency-Swimlane-Process?node-id=2-82&p=f&t=OoIFE6LqsZitYRhJ-0" class="sidebar-link" target="_blank">Figma: Agency Process</a>
+                <a href="https://docs.google.com/presentation/d/1D-YbthPRxb3dqX7ulnHJNhfDDkV99qnztLgmGSJ5nsY/edit?slide=id.g3b3782b6e0b_0_104#slide=id.g3b3782b6e0b_0_104" class="sidebar-link" target="_blank">Tech: Qualia Connect Review</a>
+            </div>
+            <div class="link-section">
+                <h4>Business Materials</h4>
+                <a href="https://docs.google.com/spreadsheets/d/1rCsHaUZwSM3EfDBy6-0wmi-JbMktU1u1/edit?usp=drive_link&ouid=113957864623858929419&rtpof=true&sd=true" class="sidebar-link" target="_blank">Financial Model</a>
+                <a href="https://docs.google.com/document/d/1EYZosvaIoqMqb8wFxnal9GbR6A0pzZqz/edit?usp=drive_link&ouid=113957864623858929419&rtpof=true&sd=true" class="sidebar-link" target="_blank">Business Plan (Draft)</a>
+            </div>
+            <div class="link-section">
+                <h4>Archive</h4>
+                <a href="archive.html" class="sidebar-link">Weekly Updates Archive</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1>Park Lane Title - Weekly Update</h1>
+            <div class="header-info">
+                <p class="week-date">Week of <span id="weekDate"></span></p>
+                <p class="slack-ref">Slack: <a href="https://slack.com/channels/park-lane" id="slackLink" class="slack-link" target="_blank">Park Lane</a></p>
+            </div>
+            <div class="header-actions">
+                <button class="btn btn-primary" id="saveBtn">Save Update</button>
+                <button class="btn btn-secondary" id="newWeekBtn">New Week</button>
+                <a href="archive.html" class="btn btn-secondary" id="previousUpdatesBtn">Previous Updates</a>
+                <span class="last-save" id="lastSave"></span>
+            </div>
+        </header>
+
+        <!-- Project Tracker Section -->
+        <section class="section">
+            <h2>PROJECT TRACKER</h2>
+            <p class="section-subtitle">Path To File Opening (2/15)</p>
+            <div class="table-container">
+                <table class="project-table" id="projectTable">
+                    <thead>
+                        <tr>
+                            <th style="width: 15%;">Business Need</th>
+                            <th style="width: 25%;">Description</th>
+                            <th style="width: 30%;">Details</th>
+                            <th style="width: 15%;">Status</th>
+                            <th style="width: 15%;">Due Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="business-need">Entity Formation & Licensing</td>
+                            <td class="editable" contenteditable="true" data-field="description"></td>
+                            <td class="editable" contenteditable="true" data-field="details"></td>
+                            <td>
+                                <select class="status-dropdown" data-field="status">
+                                    <option value="Not Started">Not Started</option>
+                                    <option value="In Progress">In Progress</option>
+                                    <option value="On Track">On Track</option>
+                                    <option value="At Risk">At Risk</option>
+                                    <option value="Complete">Complete</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="date" class="date-input" data-field="dueDate">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="business-need">Qualia Go Live</td>
+                            <td class="editable" contenteditable="true" data-field="description">Core Platform - Tasking and Workflow management for opening and closing files. Additional functionality: Connect: communications in portal Shield: Audits & Reconciliations</td>
+                            <td class="editable" contenteditable="true" data-field="details">Holding on signing until GM is onboard (or selected)
+1. Consolidate Feedback From Product, TM on pitch for Connect
+2. Full Pricing across all modules (Core, Connect, Shield)
+3. Decision on Initial package to go live
+4. Sign Contract</td>
+                            <td>
+                                <select class="status-dropdown" data-field="status">
+                                    <option value="Not Started">Not Started</option>
+                                    <option value="In Progress">In Progress</option>
+                                    <option value="On Track">On Track</option>
+                                    <option value="At Risk" selected>At Risk</option>
+                                    <option value="Complete">Complete</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="date" class="date-input" data-field="dueDate" value="2025-11-30">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="business-need">Insurance & Bonding</td>
+                            <td class="editable" contenteditable="true" data-field="description">Ensure adequate coverage and understand potential liabilities</td>
+                            <td class="editable" contenteditable="true" data-field="details">Expect the below bullets to be updated. Based on feedback from KN: E&O will be added to ASL policy (by CRS). Bonding most likely to be handled by HUB INTL
+1. Bring in insurance consultant (Gio is working on that — JL to follow up)
+2. Socialize Operations One-Pager
+3. Review existing coverage
+4. Finalize state specific bonding requirements
+5. Review Process w/ Gio
+Need calls complete by 1/15</td>
+                            <td>
+                                <select class="status-dropdown" data-field="status">
+                                    <option value="Not Started" selected>Not Started</option>
+                                    <option value="In Progress">In Progress</option>
+                                    <option value="On Track">On Track</option>
+                                    <option value="At Risk">At Risk</option>
+                                    <option value="Complete">Complete</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="date" class="date-input" data-field="dueDate" value="2025-12-31">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="business-need">Bank Selection & Account Set Up</td>
+                            <td class="editable" contenteditable="true" data-field="description">Bank accounts for escrow management.</td>
+                            <td class="editable" contenteditable="true" data-field="details">1. Socialize with Finance Team to ensure alignment
+2. Confirm Banking Functionality Within Qualia and potential Requirements:
+3. Understand whether NetSuite integration is required in ideal state (not Day 1)
+4. Select Bank Accounts (the industry prefers Wells; Citizens offers cross platform integration)
+5. Set up bank accounts for Park Lane Settlement Ops
+Selecting a Banking Partner: Notes
+Set meetings w/ citizens & finance by 11/8</td>
+                            <td>
+                                <select class="status-dropdown" data-field="status">
+                                    <option value="Not Started" selected>Not Started</option>
+                                    <option value="In Progress">In Progress</option>
+                                    <option value="On Track">On Track</option>
+                                    <option value="At Risk">At Risk</option>
+                                    <option value="Complete">Complete</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="date" class="date-input" data-field="dueDate">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="business-need">Underwriter Appointments</td>
+                            <td class="editable" contenteditable="true" data-field="description">Relationships with insurers who will be issuing title commitments and policies</td>
+                            <td class="editable" contenteditable="true" data-field="details">1. We want to have at least 2 underwriter partners. Initial list is WestCor and First American. Call scheduled w/ FNF for additional optionality. Working on intro to Essent as well (better splits in MO)
+2. Submit Indication of Interest to Underwriters
+3. Create to-do-list based on response</td>
+                            <td>
+                                <select class="status-dropdown" data-field="status">
+                                    <option value="Not Started">Not Started</option>
+                                    <option value="In Progress">In Progress</option>
+                                    <option value="On Track" selected>On Track</option>
+                                    <option value="At Risk">At Risk</option>
+                                    <option value="Complete">Complete</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="date" class="date-input" data-field="dueDate">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="business-need">VP/GM Hiring</td>
+                            <td class="editable" contenteditable="true" data-field="description">Hiring Core Team</td>
+                            <td class="editable" contenteditable="true" data-field="details">Closing:
+1. Set candidate expectations for final two steps
+2. Distribute case study
+3. Schedule Review meeting for early next week
+4. Final meeting w/ Brian 1/15; 1/16 (have availabilities from RZ)</td>
+                            <td>
+                                <select class="status-dropdown" data-field="status">
+                                    <option value="Not Started" selected>Not Started</option>
+                                    <option value="In Progress">In Progress</option>
+                                    <option value="On Track">On Track</option>
+                                    <option value="At Risk">At Risk</option>
+                                    <option value="Complete">Complete</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="date" class="date-input" data-field="dueDate">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="business-need">Legal</td>
+                            <td class="editable" contenteditable="true" data-field="description">Intercompany Agreements</td>
+                            <td class="editable" contenteditable="true" data-field="details">will we need a service agreement between ASL & park lane</td>
+                            <td>
+                                <select class="status-dropdown" data-field="status">
+                                    <option value="Not Started" selected>Not Started</option>
+                                    <option value="In Progress">In Progress</option>
+                                    <option value="At Risk">At Risk</option>
+                                    <option value="Complete">Complete</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="date" class="date-input" data-field="dueDate">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Main Content Grid -->
+        <div class="content-grid">
+            <!-- Left Column: Checklists -->
+            <div class="left-column">
+                <!-- Weekly Checklist Section -->
+                <section class="section">
+                    <div class="section-header">
+                        <h2>IMMEDIATE NEXT STEPS - WEEKLY CHECKLIST</h2>
+                        <div class="checklist-stats">
+                            <span id="checklistProgress">0 of 0 tasks complete</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="progressFill"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Filters -->
+                    <div class="filter-controls">
+                        <select id="filterDepartment" class="filter-select">
+                            <option value="all">All Departments</option>
+                            <option value="VP/GM Hiring">VP/GM Hiring</option>
+                            <option value="Revenue Forecast">Revenue Forecast</option>
+                            <option value="Technology">Technology</option>
+                            <option value="Finance">Finance</option>
+                            <option value="Insurance">Insurance</option>
+                            <option value="Bonding">Bonding</option>
+                            <option value="Legal">Legal</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <select id="filterPriority" class="filter-select">
+                            <option value="all">All Priorities</option>
+                            <option value="High">High</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Low">Low</option>
+                        </select>
+                        <button class="btn btn-small" id="sortByDateBtn">Sort by Due Date</button>
+                    </div>
+
+                    <!-- Checklist Items Container -->
+                    <div class="checklist-container" id="checklistContainer">
+                        <!-- Checklist items will be dynamically added here -->
+                    </div>
+
+                    <!-- Add Task Button -->
+                    <button class="btn btn-add-task" id="addTaskBtn">+ Add New Task</button>
+                </section>
+
+                <!-- Weekly Notes Section -->
+                <section class="section">
+                    <h2>WEEKLY NOTES</h2>
+                    <div class="notes-container" id="notesContainer">
+                        <!-- Note blocks will be dynamically added here -->
+                    </div>
+                    <button class="btn btn-add-task" id="addNoteBlockBtn" style="margin-top: var(--space-4);">+ Add New Note</button>
+                </section>
+
+                <!-- Underwriter Appointment Checklist -->
+                <section class="section">
+                    <h2>UNDERWRITER APPOINTMENT CHECKLIST</h2>
+                    <div class="checklist-container" id="underwriterChecklist">
+                        <!-- Checklist items will be dynamically added here -->
+                    </div>
+                    <button class="btn btn-add-task" id="addUnderwriterItemBtn">+ Add New Item</button>
+                </section>
+
+                <!-- Bonding Overview Section -->
+                <section class="section">
+                    <h2>BONDING OVERVIEW</h2>
+                    <p class="section-description">
+                        This section tracks research and requirements related to bonding costs across all states where Park Lane Title will operate. 
+                        Bonding requirements vary by state and are essential for title insurance agency licensing and operations.
+                    </p>
+                    
+                    <div class="bonding-brokers">
+                        <h3>Engaged Brokers</h3>
+                        <div class="broker-list">
+                            <div class="broker-item">
+                                <strong>CRS Limited (WTW)</strong>
+                                <p>Contact: Gio Umattino</p>
+                                <p>Email: <a href="mailto:giovanni@crslimited.com" class="contact-link">giovanni@crslimited.com</a></p>
+                            </div>
+                            <div class="broker-item">
+                                <strong>HUB International</strong>
+                                <p>Contact: Anne Higginbottom</p>
+                                <p>Email: <a href="mailto:anne.higginbottom@hubinternational.com" class="contact-link">anne.higginbottom@hubinternational.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bonding-table-container">
+                        <h3>Forecasted Bonding Requirements</h3>
+                        <div class="table-container">
+                            <table class="bonding-table">
+                                <thead>
+                                    <tr>
+                                        <th>State</th>
+                                        <th>Bond Type</th>
+                                        <th>Bond Amount</th>
+                                        <th>Estimated Annual Cost</th>
+                                        <th>Cost Range</th>
+                                        <th>Notes</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Missouri</td>
+                                        <td>Title Service Bond</td>
+                                        <td class="amount">$25,000</td>
+                                        <td class="amount">$250</td>
+                                        <td>1.0%-2.0%</td>
+                                        <td>Required for title service businesses per MO Rev Stat §301.112-301.119</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="3">Florida</td>
+                                        <td>Title Agency Bond</td>
+                                        <td class="amount">$35,000</td>
+                                        <td class="amount">$350</td>
+                                        <td>1.0%-3.0%</td>
+                                        <td>Required per FL Stat §626.8419</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fidelity Bond</td>
+                                        <td class="amount">$50,000</td>
+                                        <td class="amount">$500</td>
+                                        <td>1.0%-2.5%</td>
+                                        <td>Required in addition to agency bond; acceptable to appointing insurer</td>
+                                    </tr>
+                                    <tr class="subtotal-row">
+                                        <td><strong>Total (FL)</strong></td>
+                                        <td class="amount"><strong>$85,000</strong></td>
+                                        <td class="amount"><strong>$850</strong></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ohio</td>
+                                        <td>Title Agent Bond</td>
+                                        <td class="amount">$150,000</td>
+                                        <td class="amount">$1,500</td>
+                                        <td>1.0%-3.0%</td>
+                                        <td>Required per OH Admin Code 3901-7-02; Also requires E&O insurance ($250k min)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Georgia</td>
+                                        <td>No Specific Bond</td>
+                                        <td class="amount">—</td>
+                                        <td class="amount">$0</td>
+                                        <td>N/A</td>
+                                        <td>Georgia does not require specific surety bonds for title insurance agencies</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="3">Texas</td>
+                                        <td>Title Agent Bond</td>
+                                        <td class="amount">$10,000</td>
+                                        <td class="amount">$100</td>
+                                        <td>0.5%-2.0%</td>
+                                        <td>Minimum $10k or 10% of gross premium (max $100k) per TX Insurance Code §2651</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Escrow Officer Bond</td>
+                                        <td class="amount">$15,000</td>
+                                        <td class="amount">$225</td>
+                                        <td>1.0%-3.0%</td>
+                                        <td>Variable: $5k per escrow officer (assumes 3 officers; max $50k total)</td>
+                                    </tr>
+                                    <tr class="subtotal-row">
+                                        <td><strong>Total (TX)</strong></td>
+                                        <td class="amount"><strong>$25,000</strong></td>
+                                        <td class="amount"><strong>$325</strong></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr class="total-row">
+                                        <td colspan="2"><strong>TOTAL STARTUP COSTS</strong></td>
+                                        <td class="amount"><strong>$285,000</strong></td>
+                                        <td class="amount"><strong>$2,925</strong></td>
+                                        <td></td>
+                                        <td>Sum of all required bonds across states</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Column: Previous Week Reference -->
+            <div class="right-column">
+                <!-- Important Reference Documents -->
+                <section class="section">
+                    <h2>Important Reference Documents</h2>
+                    <div class="reference-docs">
+                        <div class="doc-category">
+                            <h4>Process & Platform</h4>
+                            <a href="#" class="doc-link" target="_blank">Operating Model Overview</a>
+                            <a href="https://www.figma.com/board/s5yoEnP9yozljqLqe4wpv2/Title-Agency-Swimlane-Process?node-id=2-82&p=f&t=OoIFE6LqsZitYRhJ-0" class="doc-link" target="_blank">Figma: Agency Process</a>
+                            <a href="https://docs.google.com/presentation/d/1D-YbthPRxb3dqX7ulnHJNhfDDkV99qnztLgmGSJ5nsY/edit?slide=id.g3b3782b6e0b_0_104#slide=id.g3b3782b6e0b_0_104" class="doc-link" target="_blank">Tech: Qualia Connect Review</a>
+                        </div>
+                        <div class="doc-category">
+                            <h4>Business Materials</h4>
+                            <a href="https://docs.google.com/spreadsheets/d/1rCsHaUZwSM3EfDBy6-0wmi-JbMktU1u1/edit?usp=drive_link&ouid=113957864623858929419&rtpof=true&sd=true" class="doc-link" target="_blank">Financial Model</a>
+                            <a href="https://docs.google.com/document/d/1EYZosvaIoqMqb8wFxnal9GbR6A0pzZqz/edit?usp=drive_link&ouid=113957864623858929419&rtpof=true&sd=true" class="doc-link" target="_blank">Business Plan (Draft)</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Archive Dropdown -->
+                <section class="section archive-section">
+                    <h2>View Past Weekly Checklists</h2>
+                    <select id="archiveDropdown" class="archive-dropdown">
+                        <option value="">Select a week...</option>
+                    </select>
+                    <div id="archivePreview" class="archive-preview"></div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Task Item Template (hidden) -->
+    <template id="taskTemplate">
+        <div class="checklist-item" data-priority="Medium" data-department="Other">
+            <div class="task-main">
+                <input type="checkbox" class="task-checkbox">
+                <input type="text" class="task-description" placeholder="Task description...">
+                <div class="task-meta">
+                    <select class="task-department">
+                        <option value="VP/GM Hiring">VP/GM Hiring</option>
+                        <option value="Revenue Forecast">Revenue Forecast</option>
+                        <option value="Technology">Technology</option>
+                        <option value="Finance">Finance</option>
+                        <option value="Insurance">Insurance</option>
+                        <option value="Bonding">Bonding</option>
+                        <option value="Legal">Legal</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <select class="task-priority">
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+                    <input type="date" class="task-due-date">
+                </div>
+                <button class="btn-icon btn-delete" title="Delete task">×</button>
+            </div>
+            <div class="task-expand">
+                <button class="btn-link expand-notes">Notes</button>
+                <textarea class="task-notes" placeholder="Additional notes..." style="display: none;"></textarea>
+            </div>
+        </div>
+    </template>
+
+    <script src="app.js"></script>
+</body>
+</html>
